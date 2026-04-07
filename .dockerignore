@@ -1,0 +1,8 @@
+.git
+.github
+.vscode
+.DS_Store
+target
+node_modules
+frontend
+data
