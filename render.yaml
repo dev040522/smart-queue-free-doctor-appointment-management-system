@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: smart-queue-backend
+    runtime: docker
+    branch: main
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /
+    envVars:
+      - key: DB_URL
+        value: jdbc:h2:file:/app/data/smart-queue
+      - key: CORS_ALLOWED_ORIGIN_PATTERNS
+        value: https://*.vercel.app
+      - key: H2_CONSOLE_ENABLED
+        value: "false"
+      - key: JPA_SHOW_SQL
+        value: "false"
+    disk:
+      name: data
+      mountPath: /app/data
+      sizeGB: 1

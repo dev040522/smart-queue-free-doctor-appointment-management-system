@@ -13,8 +13,8 @@ FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 
-# Render can mount a persistent disk at this path for the H2 database.
-RUN mkdir -p /opt/render/project/src/data
+# Render can mount a persistent disk here for the H2 database.
+RUN mkdir -p /app/data
 
 COPY --from=build /app/target/doctor-appointment-systemqueue-0.0.1-SNAPSHOT.jar app.jar
 
