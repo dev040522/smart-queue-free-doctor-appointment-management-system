@@ -1,0 +1,468 @@
+.book-page {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+.book-hero {
+  padding: 1.6rem 1.8rem;
+  border-radius: 32px;
+  border: 1px solid rgba(138, 181, 214, 0.22);
+  background:
+    radial-gradient(circle at top right, rgba(94, 234, 212, 0.12), transparent 26%),
+    linear-gradient(155deg, rgba(255, 255, 255, 0.94), rgba(230, 243, 255, 0.96));
+  box-shadow: 0 22px 46px -30px rgba(15, 23, 42, 0.14);
+}
+
+.book-hero__eyebrow,
+.booking-group__eyebrow,
+.booking-summary__eyebrow {
+  margin: 0 0 0.55rem;
+  color: #0f766e;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.book-hero__title {
+  margin: 0;
+  color: #16324a;
+  font-size: clamp(2.35rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.book-hero__copy {
+  margin-top: 0.95rem;
+  max-width: 42rem;
+  color: #55708b;
+}
+
+.booking-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 1.25rem;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.booking-group,
+.booking-summary {
+  padding: 1.3rem;
+  border-radius: 28px;
+  border: 1px solid rgba(138, 181, 214, 0.2);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(238, 247, 255, 0.96));
+  box-shadow: 0 18px 40px -30px rgba(15, 23, 42, 0.14);
+}
+
+.booking-group__header {
+  margin-bottom: 1rem;
+}
+
+.booking-group__title,
+.booking-summary__title {
+  margin: 0;
+  color: #16324a;
+  font-size: 1.7rem;
+  letter-spacing: -0.04em;
+}
+
+.specialist-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.specialist-card,
+.slot-chip {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(248, 251, 255, 0.96);
+  color: #294866;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.specialist-card {
+  width: 100%;
+  min-height: 11.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 24px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.specialist-card:hover,
+.slot-chip:hover,
+.doctor-option:hover {
+  transform: translateY(-2px);
+}
+
+.specialist-card--active,
+.slot-chip--active {
+  border-color: rgba(37, 99, 235, 0.3);
+  background: linear-gradient(135deg, rgba(224, 247, 244, 0.96), rgba(223, 238, 255, 0.96));
+  box-shadow: 0 16px 30px -24px rgba(59, 130, 246, 0.28);
+}
+
+.specialist-card__badge {
+  width: 3.1rem;
+  height: 3.1rem;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #5eead4, #2563eb);
+  color: #052339;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.specialist-card__name {
+  color: #173754;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.specialist-card__summary {
+  color: #5b7791;
+  font-size: 0.92rem;
+}
+
+.specialist-card__count {
+  margin-top: auto;
+  color: #0f766e;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.doctor-section__notice {
+  margin: 0 0 0.9rem;
+  color: #5b7791;
+}
+
+.doctor-section__notice strong {
+  color: #16324a;
+}
+
+.doctor-empty {
+  padding: 1rem 1.05rem;
+  border-radius: 20px;
+  border: 1px dashed rgba(56, 189, 248, 0.28);
+  background: rgba(244, 250, 255, 0.9);
+  color: #5c7892;
+}
+
+.doctor-options {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.doctor-option {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  text-align: left;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(248, 251, 255, 0.98);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.doctor-option--active {
+  border-color: rgba(37, 99, 235, 0.28);
+  background:
+    radial-gradient(circle at top right, rgba(94, 234, 212, 0.16), transparent 34%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(226, 239, 255, 0.98));
+  box-shadow: 0 18px 32px -24px rgba(59, 130, 246, 0.22);
+}
+
+.doctor-option__avatar {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #5eead4, #2563eb);
+  color: #052339;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.doctor-option__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.doctor-option__name {
+  color: #173754;
+  font-size: 1.12rem;
+  font-weight: 800;
+}
+
+.doctor-option__specialty {
+  color: #82d8ff;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.doctor-option__meta {
+  color: #5c7892;
+  font-size: 0.92rem;
+}
+
+.doctor-option__fees {
+  margin-top: 0.3rem;
+  color: #0f766e;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.consultation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.consultation-card {
+  width: 100%;
+  display: grid;
+  gap: 0.45rem;
+  padding: 1rem;
+  border-radius: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(248, 251, 255, 0.98);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.consultation-card:hover {
+  transform: translateY(-2px);
+}
+
+.consultation-card--active {
+  border-color: rgba(37, 99, 235, 0.28);
+  background:
+    radial-gradient(circle at top right, rgba(94, 234, 212, 0.14), transparent 34%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(226, 239, 255, 0.98));
+  box-shadow: 0 18px 32px -24px rgba(59, 130, 246, 0.22);
+}
+
+.consultation-card__type {
+  color: #173754;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.consultation-card__price {
+  color: #0f766e;
+  font-size: 1.4rem;
+  letter-spacing: -0.04em;
+}
+
+.consultation-card__note {
+  color: #5c7892;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.booking-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.booking-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.booking-field--wide {
+  grid-column: span 2;
+}
+
+.booking-field__label,
+.booking-summary__label {
+  color: #0f766e;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.booking-field input,
+.booking-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(255, 255, 255, 0.98);
+  color: #16324a;
+  resize: vertical;
+}
+
+.booking-field input::placeholder,
+.booking-field textarea::placeholder {
+  color: #7b93ab;
+}
+
+.booking-field input:focus,
+.booking-field textarea:focus {
+  outline: none;
+  border-color: rgba(94, 234, 212, 0.72);
+  box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.12);
+}
+
+.slot-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.slot-chip {
+  min-height: 3.25rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 18px;
+  font-weight: 700;
+}
+
+.booking-hint,
+.booking-summary__note {
+  margin: 0;
+  color: #5c7892;
+}
+
+.booking-hint {
+  margin-top: 0.95rem;
+}
+
+.booking-submit {
+  padding: 1rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #5eead4, #2563eb);
+  color: #062036;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 18px 34px -24px rgba(94, 234, 212, 0.85);
+}
+
+.booking-submit:hover {
+  transform: translateY(-2px);
+}
+
+.booking-message {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(94, 234, 212, 0.28);
+  background: rgba(236, 253, 245, 0.92);
+  color: #166534;
+}
+
+.booking-summary {
+  align-self: start;
+  position: sticky;
+  top: 6.5rem;
+}
+
+.booking-summary__card {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1px solid rgba(129, 172, 204, 0.14);
+  background: rgba(245, 250, 255, 0.96);
+}
+
+.booking-summary__card strong {
+  display: block;
+  margin-top: 0.28rem;
+  color: #173754;
+  font-size: 1.02rem;
+}
+
+.booking-summary__note {
+  margin-top: 1rem;
+}
+
+@media (max-width: 1080px) {
+  .booking-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-summary {
+    position: static;
+  }
+
+  .specialist-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .booking-fields,
+  .consultation-grid,
+  .slot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-field--wide {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 580px) {
+  .book-hero,
+  .booking-group,
+  .booking-summary {
+    padding: 1.1rem;
+    border-radius: 24px;
+  }
+
+  .specialist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-option {
+    grid-template-columns: 1fr;
+  }
+}

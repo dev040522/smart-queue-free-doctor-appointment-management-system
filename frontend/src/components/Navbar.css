@@ -1,0 +1,131 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 1rem 1rem 0;
+}
+
+.topbar__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid rgba(120, 163, 198, 0.18);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgba(125, 211, 252, 0.24), transparent 32%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.84), rgba(233, 244, 255, 0.92));
+  box-shadow: 0 24px 60px -36px rgba(15, 23, 42, 0.22);
+  backdrop-filter: blur(18px);
+}
+
+.topbar__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.topbar__brand-mark {
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #5eead4, #2563eb);
+  color: #031321;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.topbar__brand-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar__title {
+  color: #12314e;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.topbar__subtitle {
+  color: rgba(39, 76, 110, 0.82);
+  font-size: 0.88rem;
+}
+
+.topbar__links {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.topbar__link {
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  color: #264a6b;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.topbar__link:hover {
+  background: rgba(56, 189, 248, 0.12);
+  color: #16324a;
+  transform: translateY(-1px);
+}
+
+.topbar__link--primary {
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 14px 30px -18px rgba(37, 99, 235, 0.95);
+}
+
+.topbar__link--primary:hover {
+  background: linear-gradient(135deg, #67e8f9, #2563eb);
+}
+
+.topbar__button {
+  font: inherit;
+}
+
+@media (max-width: 860px) {
+  .topbar__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topbar__links {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    padding: 0.8rem 0.8rem 0;
+  }
+
+  .topbar__inner {
+    padding: 1rem;
+    border-radius: 22px;
+  }
+
+  .topbar__links {
+    gap: 0.5rem;
+  }
+
+  .topbar__link {
+    flex: 1 1 calc(33.333% - 0.5rem);
+    text-align: center;
+  }
+}

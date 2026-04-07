@@ -1,0 +1,496 @@
+.admin-console {
+  width: 1280px;
+  max-width: calc(100vw - 2rem);
+  margin: 2rem auto 4rem;
+  min-height: calc(100vh - 4rem);
+  display: grid;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.admin-console__hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: flex-end;
+  padding: 1.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.16), transparent 28%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(231, 242, 255, 0.96));
+  box-shadow: 0 20px 48px -30px rgba(15, 23, 42, 0.14);
+}
+
+.admin-console__eyebrow {
+  margin-bottom: 0.55rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2563eb;
+}
+
+.admin-console__title {
+  margin: 0;
+  color: #16324a;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.02;
+}
+
+.admin-console__copy {
+  margin-top: 0.8rem;
+  max-width: 60ch;
+  color: #57728d;
+  line-height: 1.6;
+}
+
+.admin-console__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.admin-console__button {
+  border: 0;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #eff6ff;
+  cursor: pointer;
+  box-shadow: 0 18px 36px rgba(37, 99, 235, 0.24);
+}
+
+.admin-console__button--ghost {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  color: #244b6a;
+  box-shadow: none;
+}
+
+.admin-console__message {
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+}
+
+.admin-console__message--error {
+  border: 1px solid rgba(248, 113, 113, 0.24);
+  background: rgba(254, 242, 242, 0.96);
+  color: #b91c1c;
+}
+
+.admin-console__message--success {
+  border: 1px solid rgba(74, 222, 128, 0.24);
+  background: rgba(240, 253, 244, 0.96);
+  color: #166534;
+}
+
+.admin-console__message--info {
+  border: 1px solid rgba(96, 165, 250, 0.22);
+  background: rgba(239, 246, 255, 0.96);
+  color: #1d4ed8;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.admin-stat,
+.admin-surface {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 42px -30px rgba(15, 23, 42, 0.14);
+  overflow: hidden;
+}
+
+.admin-stat {
+  padding: 1.2rem 1.25rem;
+}
+
+.admin-stat__label {
+  display: block;
+  font-size: 0.88rem;
+  color: #63809b;
+}
+
+.admin-stat__value {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 2rem;
+  color: #16324a;
+}
+
+.admin-surface {
+  padding: 1.35rem;
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-surface__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.admin-surface__title {
+  margin: 0;
+  color: #16324a;
+}
+
+.admin-inline-link {
+  color: #2563eb;
+}
+
+.admin-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.admin-list__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(246, 250, 255, 0.96);
+}
+
+.admin-list__item strong {
+  color: #173754;
+}
+
+.admin-list__item p {
+  margin-top: 0.3rem;
+  color: #5c7892;
+}
+
+.admin-list__meta {
+  display: grid;
+  gap: 0.3rem;
+  text-align: right;
+  color: #5b7891;
+}
+
+.admin-empty,
+.admin-table__empty {
+  padding: 1.2rem;
+  color: #5e7993;
+  text-align: center;
+}
+
+.admin-table-wrap {
+  flex: 1;
+  max-height: 390px;
+  overflow: auto;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 18px;
+}
+
+.admin-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.admin-table thead th {
+  padding: 0.9rem 0.85rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(248, 250, 252, 0.98);
+  color: #5b7892;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.admin-table tbody td {
+  padding: 0.9rem 0.85rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  color: #24415d;
+  vertical-align: top;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.admin-table tbody tr:hover {
+  background: rgba(226, 239, 255, 0.56);
+}
+
+.admin-table__control {
+  width: 100%;
+  min-width: 120px;
+  padding: 0.58rem 0.72rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #16324a;
+  font: inherit;
+}
+
+.admin-table__stack {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.admin-table__stack strong {
+  color: #173754;
+}
+
+.admin-table__stack span,
+.admin-table__notes {
+  color: #5c7892;
+}
+
+.admin-table__notes {
+  min-width: 220px;
+  max-width: 320px;
+  overflow-wrap: anywhere;
+}
+
+.admin-table__patient-cell {
+  min-width: 180px;
+}
+
+.admin-table__email-cell {
+  min-width: 240px;
+  overflow-wrap: anywhere;
+}
+
+.admin-table__doctor-cell {
+  min-width: 220px;
+}
+
+.admin-table__consultation-cell {
+  min-width: 150px;
+}
+
+.admin-table__compact-cell {
+  min-width: 90px;
+  white-space: nowrap;
+}
+
+.admin-table__status-cell {
+  min-width: 180px;
+}
+
+.admin-table__status-cell .admin-table__control {
+  min-width: 180px;
+}
+
+.admin-table__actions-cell {
+  min-width: 150px;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.admin-actions--stack {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.admin-actions--stack .admin-action {
+  width: 100%;
+}
+
+.admin-appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1rem;
+}
+
+.admin-appointment-card {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at top right, rgba(96, 165, 250, 0.12), transparent 32%),
+    rgba(248, 250, 252, 0.96);
+  box-shadow: 0 18px 42px -32px rgba(15, 23, 42, 0.2);
+  padding: 1.2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.admin-appointment-card__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.admin-appointment-card__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2563eb;
+}
+
+.admin-appointment-card__title {
+  margin: 0;
+  color: #16324a;
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.admin-appointment-card__subtle {
+  margin: 0.35rem 0 0;
+  color: #5c7892;
+  overflow-wrap: anywhere;
+}
+
+.admin-appointment-card__token {
+  min-width: 88px;
+  padding: 0.7rem 0.85rem;
+  border-radius: 18px;
+  background: rgba(219, 234, 254, 0.9);
+  text-align: center;
+  color: #1d4ed8;
+}
+
+.admin-appointment-card__token span {
+  display: block;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.admin-appointment-card__token strong {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 1.5rem;
+}
+
+.admin-appointment-card__details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.admin-detail {
+  display: grid;
+  gap: 0.22rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.admin-detail__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.admin-detail strong {
+  color: #173754;
+  line-height: 1.25;
+}
+
+.admin-detail span:last-child {
+  color: #5c7892;
+  overflow-wrap: anywhere;
+}
+
+.admin-appointment-card__symptoms {
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.admin-appointment-card__symptoms p {
+  margin: 0.35rem 0 0;
+  color: #516d88;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.admin-appointment-card__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+}
+
+.admin-appointment-card__status {
+  flex: 1;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.admin-action {
+  border: 0;
+  padding: 0.58rem 0.9rem;
+  border-radius: 999px;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+}
+
+.admin-action:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.admin-action--primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.18);
+}
+
+.admin-action--danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 12px 24px rgba(127, 29, 29, 0.2);
+}
+
+@media (max-width: 900px) {
+  .admin-console {
+    width: auto;
+    max-width: calc(100vw - 1rem);
+    min-height: auto;
+    margin: 1rem auto 2rem;
+  }
+
+  .admin-console__hero,
+  .admin-surface__header,
+  .admin-list__item,
+  .admin-appointment-card__top,
+  .admin-appointment-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-console__actions,
+  .admin-list__meta {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .admin-appointment-card__details {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-surface {
+    min-height: auto;
+  }
+
+  .admin-table-wrap {
+    max-height: none;
+  }
+}
