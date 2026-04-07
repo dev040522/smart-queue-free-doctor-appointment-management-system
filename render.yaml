@@ -8,14 +8,12 @@ services:
     healthCheckPath: /
     envVars:
       - key: DB_URL
-        value: jdbc:h2:file:/app/data/smart-queue
+        value: jdbc:h2:mem:smartqueue;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
       - key: CORS_ALLOWED_ORIGIN_PATTERNS
         value: https://*.vercel.app
+      - key: FRONTEND_APP_URL
+        value: https://smart-queue-free-doctor-appointment.vercel.app
       - key: H2_CONSOLE_ENABLED
         value: "false"
       - key: JPA_SHOW_SQL
         value: "false"
-    disk:
-      name: data
-      mountPath: /app/data
-      sizeGB: 1
